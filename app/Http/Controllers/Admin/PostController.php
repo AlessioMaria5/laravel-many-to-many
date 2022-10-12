@@ -122,6 +122,7 @@ class PostController extends Controller
     protected function filteredSlug($title){
 
         $slug = Str::slug($title,'-');
+        return $slug; 
     }
 
 
