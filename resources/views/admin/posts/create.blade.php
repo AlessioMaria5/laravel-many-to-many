@@ -21,6 +21,8 @@
                     {{$message}}
                 </div>
     @enderror
+
+
     <label for="text">content</label>
     <textarea type="text" id="content" name="content" ></textarea>
 
@@ -30,6 +32,15 @@
         <option value="{{ $category->id }}">{{ $category->title }}</option>
         @endforeach
     </select>
+
+                 @foreach ($tags as $tag)
+                    <div>
+                        <input name="tags[]" type="checkbox" id="{{$tag->id}}" value="{{$tag->id}}">
+                        <label for="{{$tag->id}}">{{$tag->title}}</label>
+                    </div>
+                @endforeach
+
+    
 
     <button type="submit">Crea</button>
 </form>
