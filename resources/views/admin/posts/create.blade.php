@@ -13,7 +13,7 @@
                     {{$message}}
                 </div>
     @enderror
-
+    <label for="slug">slug</label>
     <input type="text" class="@error('slug') is-invalid @enderror" id="slug" name="slug" >
 
     @error('slug')
@@ -21,9 +21,16 @@
                     {{$message}}
                 </div>
     @enderror
-    
+    <label for="text">content</label>
     <textarea type="text" id="content" name="content" ></textarea>
-    
+
+    <label for="category_id">slug</label>
+    <select name="category_id" id="category_id">
+        @foreach($categories as $category)
+        <option value="{{ $category->id }}">{{ $category->title }}</option>
+        @endforeach
+    </select>
+
     <button type="submit">Crea</button>
 </form>
 
