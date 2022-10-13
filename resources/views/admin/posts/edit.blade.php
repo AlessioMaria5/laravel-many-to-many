@@ -24,6 +24,8 @@
                 </div>
     @enderror
 
+    
+
     <textarea type="text" id="content" name="content" ></textarea>
     
     <button type="submit">Complete Edit</button>
