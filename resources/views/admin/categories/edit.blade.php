@@ -2,7 +2,7 @@
 
 @section ('content')
 
-<form action="{{route('admin.categories.update', ['categories' => $category->id])}}" method="POST">
+<form action="{{route('admin.categories.update', ['category' => $category->id])}}" method="POST">
     @csrf
 
     @method('PUT')
@@ -24,7 +24,6 @@
                 </div>
     @enderror
 
-    <textarea type="text" id="content" name="content" ></textarea>
     
     <button type="submit">Complete Edit</button>
 </form>
