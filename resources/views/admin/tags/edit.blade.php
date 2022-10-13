@@ -2,7 +2,7 @@
 
 @section ('content')
 
-<form action="{{route('admin.tags.update', compact('tags'))}}" method="POST">
+<form action="{{route('admin.tags.update', compact('tag'))}}" method="POST">
     @csrf
 
     @method('PUT')

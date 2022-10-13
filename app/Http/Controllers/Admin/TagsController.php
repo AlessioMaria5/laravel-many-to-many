@@ -71,7 +71,7 @@ class TagsController extends Controller
     public function edit(Tag $tag)
 
     {
-        return view('admin.tags.edit', compact('tags'));
+        return view('admin.tags.edit', compact('tag'));
     }
 
     /**
